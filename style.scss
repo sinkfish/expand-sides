@@ -1,6 +1,11 @@
+
+*, :after, :before {
+   box-sizing: border-box;
+}
+
 body {
    margin: 0;
-   padding: 30px 0;
+   padding: 25px 0;
    font: 400 1rem/1.5rem Arial, sans;
 
    p {
@@ -10,6 +15,11 @@ body {
    }
 }
 
+section {
+   max-width: 1024px;
+   margin: 0 auto;
+}
+
 .container {
    display: grid;
    gap: 20px;
@@ -17,9 +27,7 @@ body {
    background-color: #EEE;
 
    @media (min-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
-      max-width: 1024px;
-      margin: 0 auto;
+      grid-template-columns: 420px 1fr;
    }
 
    [class*='col-'] {
@@ -27,14 +35,57 @@ body {
    }
 
    .expanded-wrap {
-      padding: 10px;
-      color: white;
-      background-color: red;
+      position: relative;
+      margin-bottom: 10px;
+
+      [class*='expanded-box-'] {
+         padding: 10px;
+         color: white;
+         background-color: red;
+
+         @media (min-width: 992px) {
+            position: absolute;
+            top: 0;
+         }
+      }
+
+      .expanded-box-a {
+         right: 0;
+      }
+
+      .expanded-box-b {
+         left: 0;
+      }
+   }
+}
+
+.container2 {
+   padding: 30px;
+   background-color: #EEE;
+
+   .row-a {
+      position: relative;
+
+      .expanded-wrap {
+         margin-bottom: 10px;
+         padding: 10px;
+         color: white;
+         background-color: green;
+
+         @media (min-width: 992px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+      }
+   }
+
+   .row-b {
+      display: grid;
+      gap: 20px;
 
       @media (min-width: 992px) {
-         position: absolute;
-         top: 0;
-         left: 0;
+         grid-template-columns: repeat(2, 1fr);
       }
    }
 }
@@ -44,4 +95,9 @@ footer {
    font-size: 0.8rem;
    color: #999;
    text-align: center;
+}
+
+.test {
+   height: 120px;
+   background-color: blue;
 }
