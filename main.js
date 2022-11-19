@@ -2,32 +2,33 @@ $(() => {
 
    function expandSides() {
 
-      viewport = $('body').width();
+      viewportSize = $('body').width();
 
-      if (viewport >= 992) {
+      if (viewportSize >= 992) {
 
-         boxInner = ".container, .container2";
+         parentWrap = ".container, .container2";
 
-         $(boxInner).each(function() {
+         $(parentWrap).each(function() {
 
-            boxInnerSideLt = ".col-a, .row-a", 
-            boxInnerSideRt = ".col-b",
-            sliceVal = viewport - $(this).innerWidth(),
-            getValPad = $(this).innerWidth() - $(this).width(),
+            child_LeftSide = ".col-a, .row-a", 
+            child_RightSide = ".col-b",
+            
+            sliceVal = viewportSize - $(this).innerWidth(),
+            getValPadding = $(this).innerWidth() - $(this).width(),
 
-            getValLt = $(this).find(boxInnerSideLt).innerWidth(),
-            getValRt = $(this).find(boxInnerSideRt).innerWidth(),
+            getValLt = $(this).find(child_LeftSide).innerWidth(),
+            getValRt = $(this).find(child_RightSide).innerWidth(),
 
-            valLt = sliceVal / 2 + getValLt + getValPad / 2,
-            valRt = sliceVal / 2 + getValRt + getValPad / 2;
-
-            console.log(getValPad);
+            valLt = sliceVal / 2 + getValLt + getValPadding / 2,
+            valRt = sliceVal / 2 + getValRt + getValPadding / 2;
 
             $(this).find('.expand-side-a').css('width', valLt);
             $(this).find('.expand-side-b').css('width', valRt);
 
+            // Optional
             $(this).find('.expand-side-a .width-value span').text(valLt);
             $(this).find('.expand-side-b .width-value span').text(valRt);
+            // End Optional
             
          });
 
@@ -38,6 +39,7 @@ $(() => {
       }
    } expandSides();
 
+   // Optional
    function getHeight() {
       divHeight1 = $('.container').find('.col-a .red-box').innerHeight();
       divHeight2 = $('.container').find('.col-b .red-box').innerHeight();
@@ -47,6 +49,7 @@ $(() => {
       $('.col-b .expanded-wrap').css('height', divHeight2);
       $('.container2 .row-a').css('height', divHeight3);
    } getHeight();
+   // End Optional
 
    $(window).on('resize', () => {
       expandSides();
