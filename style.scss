@@ -39,9 +39,9 @@ section {
       margin-bottom: 10px;
 
       [class*='expanded-box-'] {
-         padding: 10px;
+         padding: 10px 15px 15px;
          color: white;
-         background-color: red;
+         background-color: rgba(#111, 0.85);
 
          @media (min-width: 992px) {
             position: absolute;
@@ -51,10 +51,12 @@ section {
 
       .expanded-box-a {
          right: 0;
+         border-radius: 0 6px 6px 0;
       }
 
       .expanded-box-b {
          left: 0;
+         border-radius: 6px 0 0 6px;
       }
    }
 }
@@ -70,12 +72,13 @@ section {
          margin-bottom: 10px;
          padding: 10px 20px;
          color: white;
-         background-color: green;
+         background-color: rgba(#5500d6,0.8);
 
          @media (min-width: 992px) {
             position: absolute;
             top: 0;
             left: 0;
+            border-radius: 6px 0 0 6px;
          }
       }
    }

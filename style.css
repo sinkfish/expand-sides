@@ -1,6 +1,5 @@
 *, :after, :before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,7 +7,6 @@ body {
   padding: 25px 0;
   font: 400 1rem/1.5rem Arial, sans;
 }
-
 body p:last-child {
   margin: 0;
 }
@@ -19,84 +17,71 @@ section {
 }
 
 .container {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
   padding: 30px 20px;
   background-color: #EEE;
 }
-
 @media (min-width: 992px) {
   .container {
-    -ms-grid-columns: 420px 1fr;
-        grid-template-columns: 420px 1fr;
+    grid-template-columns: 420px 1fr;
   }
 }
-
-.container [class*='col-'] {
+.container [class*=col-] {
   position: relative;
 }
-
 .container .expanded-wrap {
   position: relative;
   margin-bottom: 10px;
 }
-
-.container .expanded-wrap [class*='expanded-box-'] {
-  padding: 10px;
+.container .expanded-wrap [class*=expanded-box-] {
+  padding: 10px 15px 15px;
   color: white;
-  background-color: red;
+  background-color: rgba(17, 17, 17, 0.85);
 }
-
 @media (min-width: 992px) {
-  .container .expanded-wrap [class*='expanded-box-'] {
+  .container .expanded-wrap [class*=expanded-box-] {
     position: absolute;
     top: 0;
   }
 }
-
 .container .expanded-wrap .expanded-box-a {
   right: 0;
+  border-radius: 0 6px 6px 0;
 }
-
 .container .expanded-wrap .expanded-box-b {
   left: 0;
+  border-radius: 6px 0 0 6px;
 }
 
 .container2 {
   padding: 30px 45px;
   background-color: #DDD;
 }
-
 .container2 .row-a {
   position: relative;
 }
-
 .container2 .row-a .expanded-wrap {
   margin-bottom: 10px;
   padding: 10px 20px;
   color: white;
-  background-color: green;
+  background-color: rgba(85, 0, 214, 0.8);
 }
-
 @media (min-width: 992px) {
   .container2 .row-a .expanded-wrap {
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 6px 0 0 6px;
   }
 }
-
 .container2 .row-b {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
 }
-
 @media (min-width: 992px) {
   .container2 .row-b {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -105,4 +90,4 @@ footer {
   font-size: 0.8rem;
   color: #999;
   text-align: center;
-}
+}/*# sourceMappingURL=style.css.map */
