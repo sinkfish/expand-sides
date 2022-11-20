@@ -8,6 +8,10 @@ body {
    padding: 25px 0;
    font: 400 1rem/1.5rem Arial, sans;
 
+   @media (max-width: 991px) {
+      padding: 20px;
+   }
+
    p {
       &:last-child {
          margin: 0;
@@ -24,7 +28,8 @@ section {
    display: grid;
    gap: 20px;
    padding: 30px 20px;
-   background-color: #EEE;
+   border-radius: 8px 8px 0 0;
+   background-color: #beffdc;
 
    @media (min-width: 992px) {
       grid-template-columns: 420px 1fr;
@@ -63,7 +68,9 @@ section {
 
 .container2 {
    padding: 30px 45px;
-   background-color: #DDD;
+   color: white;
+   border-radius: 0 0 8px 8px;
+   background-color: #5b6577;
 
    .row-a {
       position: relative;
