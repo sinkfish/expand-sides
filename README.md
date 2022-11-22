@@ -1,4 +1,4 @@
-# expand-sides
+# Expand Sides
 A jQuery Expand Sides
 
 ###### Variables Functions
