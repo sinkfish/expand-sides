@@ -19,6 +19,7 @@ $(() => {
             getValLt = $(this).find(child_LeftSide).innerWidth(),
             getValRt = $(this).find(child_RightSide).innerWidth(),
 
+            // Calculation
             valLt = sliceVal / 2 + getValLt + getValPadding / 2,
             valRt = sliceVal / 2 + getValRt + getValPadding / 2;
 
