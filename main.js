@@ -6,7 +6,7 @@ $(() => {
 
       if (viewportSize >= 992) {
 
-         let parentWrap = ".container, .container2";
+         const parentWrap = ".container, .container2";
 
          $(parentWrap).each(function() {
 
