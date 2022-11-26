@@ -10,12 +10,11 @@ $(() => {
 
          $(parentWrap).each(function() {
 
-            let child_LeftSide = ".col-a, .row-a", 
-                child_RightSide = ".col-b";
+            const child_LeftSide = ".col-a, .row-a", 
+                  child_RightSide = ".col-b";
             
-            var sliceVal = viewportSize - $(this).innerWidth(),
+            let sliceVal = viewportSize - $(this).innerWidth(),
                 getValPadding = $(this).innerWidth() - $(this).width(),
-
                 getValLt = $(this).find(child_LeftSide).innerWidth(),
                 getValRt = $(this).find(child_RightSide).innerWidth(),
 
