@@ -2,26 +2,26 @@ $(() => {
 
    function expandSides() {
 
-      viewportSize = $('body').width();
+      const viewportSize = $('body').width();
 
       if (viewportSize >= 992) {
 
-         parentWrap = ".container, .container2";
+         let parentWrap = ".container, .container2";
 
          $(parentWrap).each(function() {
 
-            child_LeftSide = ".col-a, .row-a", 
-            child_RightSide = ".col-b",
+            let child_LeftSide = ".col-a, .row-a", 
+                child_RightSide = ".col-b";
             
-            sliceVal = viewportSize - $(this).innerWidth(),
-            getValPadding = $(this).innerWidth() - $(this).width(),
+            var sliceVal = viewportSize - $(this).innerWidth(),
+                getValPadding = $(this).innerWidth() - $(this).width(),
 
-            getValLt = $(this).find(child_LeftSide).innerWidth(),
-            getValRt = $(this).find(child_RightSide).innerWidth(),
+                getValLt = $(this).find(child_LeftSide).innerWidth(),
+                getValRt = $(this).find(child_RightSide).innerWidth(),
 
-            // Calculation
-            valLt = sliceVal / 2 + getValLt + getValPadding / 2,
-            valRt = sliceVal / 2 + getValRt + getValPadding / 2;
+                // Calculation
+                valLt = sliceVal / 2 + getValLt + getValPadding / 2,
+                valRt = sliceVal / 2 + getValRt + getValPadding / 2;
 
             $(this).find('.expand-side-a').css('width', valLt);
             $(this).find('.expand-side-b').css('width', valRt);
