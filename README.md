@@ -1,7 +1,7 @@
 # Expand Sides
 A jQuery Expand Sides
 
-###### Variables Functions
+###### Functions
 ```
 parentWrap: target parent element
 child_LeftSide & child_RightSide: what side to be calculated
